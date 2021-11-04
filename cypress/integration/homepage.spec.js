@@ -1,8 +1,12 @@
-describe("Homepage", () => {
-  it("shows header", () => {
-    // Start from the index page
+describe("Using the header", () => {
+  it("Logo returns user to homepage", () => {
+    // Start on homepage
     cy.visit("/");
 
-    cy.get("h1").contains("Trenton Corporation");
+    // Click the logo
+    cy.get('[data-testid="logo"]').click();
+
+    // Confirm we're still on the homepage
+    cy.url().should("eq", "http://localhost:3000");
   });
 });
