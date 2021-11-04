@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import companyLogo from "public/companyLogo.gif";
-
 export default function Header(): JSX.Element {
   return (
     <div>
