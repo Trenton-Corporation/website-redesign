@@ -1,5 +1,5 @@
 describe("Using the header", () => {
-  it("Logo returns user to homepage", () => {
+  it("Clicking logo returns user to homepage", () => {
     // Start on homepage
     cy.visit("/");
 
