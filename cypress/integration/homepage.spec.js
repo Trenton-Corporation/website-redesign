@@ -7,6 +7,6 @@ describe("Using the header", () => {
     cy.get('[data-testid="logo"]').click();
 
     // Confirm we're still on the homepage
-    cy.url().should("eq", "http://localhost:3000");
+    cy.url().should("eq", "http://localhost:3000/");
   });
 });
