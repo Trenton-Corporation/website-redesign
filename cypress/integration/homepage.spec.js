@@ -30,4 +30,14 @@ describe("Using the header", () => {
       "https://goo.gl/maps/R2QPKQwxUqhZg7k68"
     );
   });
+
+  it("Displays language picker and all options", () => {
+    // Find language picker title and input labelss
+    cy.get('[data-testid="language_picker"]')
+      .children()
+      .should("contain", "Choose language:")
+      .and("contain", "English")
+      .and("contain", "Español")
+      .and("contain", "Français");
+  });
 });
