@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function Header(): JSX.Element {
   return (
     <div>
-      <Link href="/" data-testid="logo">
-        <a>
+      <Link href="/">
+        <a data-testid="logo">
           <span>Trenton Corporation</span>
           <Image
             src="/companyLogo.gif"
