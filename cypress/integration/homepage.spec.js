@@ -21,4 +21,15 @@ describe("Using the header", () => {
       "mailto:trenton@trentoncorp.com"
     );
   });
+
+  it("Clicking mailing address opens Google Maps", () => {
+    // Click the logo
+    cy.get('[data-testid="address"]').click();
+
+    // Confirm that we're on Trenton's Google Maps page
+    cy.url().should("contain", "google.com/maps/place/Trenton+Corporation/");
+
+    // Return to homepage
+    cy.visit("/");
+  });
 });
