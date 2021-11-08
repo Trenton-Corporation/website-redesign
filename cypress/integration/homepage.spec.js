@@ -10,11 +10,11 @@ describe("Using the header", () => {
     cy.url().should("eq", "http://localhost:3000/");
   });
 
-  it("Clicking e-mail address opens mail client", () => {
+  it("E-mail address opens mail client", () => {
     // // Start on homepage
     // cy.visit("/");
 
-    // Find e-mail link and make sure it includes href "mailto:trenton@trentoncorp.com"
+    // Find e-mail link make sure it works
     cy.get('[data-testid="email"]').should(
       "have.attr",
       "href",
@@ -22,14 +22,12 @@ describe("Using the header", () => {
     );
   });
 
-  it("Clicking mailing address opens Google Maps", () => {
-    // Click the logo
-    cy.get('[data-testid="address"]').click();
-
-    // Confirm that we're on Trenton's Google Maps page
-    cy.url().should("contain", "google.com/maps/place/Trenton+Corporation/");
-
-    // Return to homepage
-    cy.visit("/");
+  it("Mailing address opens Google Maps", () => {
+    // Find mailing address and make sure it sends users to Google Maps
+    cy.get('[data-testid="address"]').should(
+      "have.attr",
+      "href",
+      "https://goo.gl/maps/R2QPKQwxUqhZg7k68"
+    );
   });
 });
