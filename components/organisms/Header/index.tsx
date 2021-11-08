@@ -16,9 +16,15 @@ export default function Header(): JSX.Element {
         </a>
       </Link>
 
-      <a data-testid="email" href="mailto:trenton@trentoncorp.com">
-        trenton@trentoncorp.com
-      </a>
+      <address>
+        <a data-testid="email" href="mailto:trenton@trentoncorp.com">
+          trenton@trentoncorp.com
+        </a>
+
+        <a data-testid="address" href="https://goo.gl/maps/R2QPKQwxUqhZg7k68">
+          7700 Jackson Rd, Ann Arbor, MI 48103
+        </a>
+      </address>
     </header>
   );
 }
