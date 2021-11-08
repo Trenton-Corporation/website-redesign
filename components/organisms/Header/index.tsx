@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function Header(): JSX.Element {
   return (
-    <div>
+    <header>
       <Link href="/">
         <a data-testid="logo">
-          <span>Trenton Corporation</span>
+          <h1>Trenton Corporation</h1>
           <Image
             src="/companyLogo.gif"
             width="222"
@@ -15,6 +15,10 @@ export default function Header(): JSX.Element {
           />
         </a>
       </Link>
-    </div>
+
+      <a data-testid="email" href="mailto:trenton@trentoncorp.com">
+        trenton@trentoncorp.com
+      </a>
+    </header>
   );
 }
