@@ -27,6 +27,30 @@ export default function Header(): JSX.Element {
           </a>
         </address>
       </div>
+      <div data-testid="language_picker">
+        <p>Choose language:</p>
+
+        <div>
+          <input
+            type="radio"
+            id="english"
+            name="drone"
+            value="english"
+            checked
+          />
+          <label htmlFor="english">English</label>
+        </div>
+
+        <div>
+          <input type="radio" id="español" name="drone" value="español" />
+          <label htmlFor="español">Español</label>
+        </div>
+
+        <div>
+          <input type="radio" id="français" name="drone" value="français" />
+          <label htmlFor="français">Français</label>
+        </div>
+      </div>
     </header>
   );
 }
