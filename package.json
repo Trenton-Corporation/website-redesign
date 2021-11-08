@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "devtest": "npm run build && npm run e2e",
     "build": "next build",
     "start": "next start",
     "cypress": "cypress open",
