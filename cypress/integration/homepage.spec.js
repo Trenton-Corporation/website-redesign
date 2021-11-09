@@ -90,4 +90,20 @@ describe("Section 1", () => {
       expect($link).to.have.attr("href", "/contact");
     });
   });
+
+  it.skip("Displays visual", () => {
+    // Make sure the visual is rendered and visible; will fail until image is added.
+    cy.get('[data-testid="section_one"]')
+      .find("img")
+      .should("exist")
+      .and("be.visible");
+  });
+
+  it("Displays social proof", () => {
+    // Find all 'Call Us' and 'Send a message' links & make sure they work
+    cy.get('[data-testid="section_one"]').contains(
+      "p",
+      "Our products are easy to use and don’t require special tools. Thousands of miles of pipelines worldwide are protected by Trenton systems."
+    );
+  });
 });
