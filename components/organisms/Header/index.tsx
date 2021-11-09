@@ -27,6 +27,7 @@ export default function Header(): JSX.Element {
           </a>
         </address>
       </div>
+
       <div data-testid="language_picker">
         <p>Choose language:</p>
 
