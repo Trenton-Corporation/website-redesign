@@ -64,7 +64,7 @@ describe("Header", () => {
 
 describe("Section 1", () => {
   it("Displays title & subtitle", () => {
-    // Find h2 and confirm its text
+    // Find headers and confirm their text
     cy.get('[data-testid="section_one"]').contains(
       "h2",
       "Effective, long-lasting anti-corrosion protection above and below ground"
@@ -73,6 +73,17 @@ describe("Section 1", () => {
     cy.get('[data-testid="section_one"]').contains(
       "h3",
       "Anti-corrosion wraps, wax coatings, casing fillers, and marine pile protection systems worldwide for oil, gas, water, and chemical processing companies."
+    );
+  });
+
+  it("Displays 'Call Us' and 'Send A Message' links", () => {
+    // Find all 'Call Us' links & make sure they work
+    cy.get(".callUsLink").each((link) =>
+      expect(link).to.have.attr("href", "tel:+17344243600")
+    );
+
+    cy.get(".sendAMessageLink").each((link) =>
+      expect(link).to.have.attr("href", "mailto:trenton@trentoncorp.com")
     );
   });
 });
