@@ -2,14 +2,19 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "devtest": "npm run build && npm run e2e",
     "build": "next build",
     "start": "next start",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run",
+    "e2e": "start-server-and-test start http://localhost:3000 cypress",
+    "e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless"
   },
   "dependencies": {
     "next": "latest",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "start-server-and-test": "^1.14.0"
   },
   "devDependencies": {
     "@axe-core/react": "^4.3.1",
