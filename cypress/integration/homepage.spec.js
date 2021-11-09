@@ -7,9 +7,6 @@ describe("Homepage", () => {
 
 describe("Header", () => {
   it("Clicking logo returns user to homepage", () => {
-    // Start on homepage
-    cy.visit("/");
-
     // Click the logo
     cy.get('[data-testid="logo"]').click();
 
@@ -18,9 +15,6 @@ describe("Header", () => {
   });
 
   it("E-mail address opens mail client", () => {
-    // // Start on homepage
-    // cy.visit("/");
-
     // Find e-mail link make sure it works
     cy.get('[data-testid="email"]').should(
       "have.attr",
@@ -39,7 +33,7 @@ describe("Header", () => {
   });
 
   it("Displays language picker label and options", () => {
-    // Find language picker title and input labelss
+    // Find language picker title and check all input labels
     cy.get('[data-testid="language_picker"]')
       .children()
       .should("contain", "Choose language:")
@@ -49,7 +43,7 @@ describe("Header", () => {
   });
 
   it("Displays main navigation links", () => {
-    // Find language picker title and input labelss
+    // Find main navigation links and check their link text
     cy.get('[data-testid="main_navigation"] > ul > li')
       .children()
       .should("contain", "Home")
@@ -60,9 +54,10 @@ describe("Header", () => {
   });
 
   it("Displays search label and input", () => {
-    // Find language picker title and input labelss
+    // Find search label and check its' value
     cy.get('[data-testid="search_label"]').contains("Search");
 
+    // Check if search input is empty
     cy.get('[data-testid="search_input"]').should("be.empty");
   });
 });
