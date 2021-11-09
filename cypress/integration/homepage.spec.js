@@ -83,7 +83,7 @@ describe("Section 1", () => {
     );
 
     cy.get(".sendAMessageLink").each((link) =>
-      expect(link).to.have.attr("href", "mailto:trenton@trentoncorp.com")
+      expect(link).to.have.attr("href", "/contact")
     );
   });
 });
