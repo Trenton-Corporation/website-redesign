@@ -125,9 +125,17 @@ export default function Header(): JSX.Element {
           </div>
         </div>
 
-        <div></div>
+        <div>
+          <img src="" alt="" />
+        </div>
 
-        <div></div>
+        <div>
+          <p>
+            Our products are easy to use and don’t require special tools.
+            Thousands of miles of pipelines worldwide are protected by Trenton
+            systems.
+          </p>
+        </div>
       </section>
     </header>
   );
