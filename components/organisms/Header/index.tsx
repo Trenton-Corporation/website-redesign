@@ -88,6 +88,18 @@ export default function Header(): JSX.Element {
           data-testid="search_input"
         />
       </div>
+
+      <section data-testid="section_one">
+        <h2>
+          Effective, long-lasting anti-corrosion protection above and below
+          ground
+        </h2>
+        <h3>
+          Anti-corrosion wraps, wax coatings, casing fillers, and marine pile
+          protection systems worldwide for oil, gas, water, and chemical
+          processing companies.
+        </h3>
+      </section>
     </header>
   );
 }
