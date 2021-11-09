@@ -31,13 +31,7 @@ export default function Header(): JSX.Element {
         <p>Choose language:</p>
 
         <div>
-          <input
-            type="radio"
-            id="english"
-            name="drone"
-            value="english"
-            checked
-          />
+          <input type="radio" id="english" name="drone" value="english" />
           <label htmlFor="english">English</label>
         </div>
 
@@ -81,6 +75,18 @@ export default function Header(): JSX.Element {
           </li>
         </ul>
       </nav>
+
+      <div>
+        <label htmlFor="search" data-testid="search_label">
+          Search
+        </label>
+        <input
+          type="search"
+          name="query"
+          id="search"
+          data-testid="search_input"
+        />
+      </div>
     </header>
   );
 }
