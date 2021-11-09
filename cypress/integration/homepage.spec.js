@@ -40,4 +40,15 @@ describe("Using the header", () => {
       .and("contain", "Español")
       .and("contain", "Français");
   });
+
+  it("Displays main navigation links", () => {
+    // Find language picker title and input labelss
+    cy.get('[data-testid="main_navigation"] > ul > li')
+      .children()
+      .should("contain", "Home")
+      .and("contain", "Company")
+      .and("contain", "Products")
+      .and("contain", "Info Library")
+      .and("contain", "Contact");
+  });
 });
