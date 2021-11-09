@@ -1,4 +1,11 @@
-describe("Using the header", () => {
+describe("Homepage", () => {
+  it("successfully loads", () => {
+    // Start on homepage
+    cy.visit("http://localhost:3000/");
+  });
+});
+
+describe("Header", () => {
   it("Clicking logo returns user to homepage", () => {
     // Start on homepage
     cy.visit("/");
@@ -31,7 +38,7 @@ describe("Using the header", () => {
     );
   });
 
-  it("Displays language picker and all options", () => {
+  it("Displays language picker label and options", () => {
     // Find language picker title and input labelss
     cy.get('[data-testid="language_picker"]')
       .children()
@@ -50,5 +57,12 @@ describe("Using the header", () => {
       .and("contain", "Products")
       .and("contain", "Info Library")
       .and("contain", "Contact");
+  });
+
+  it("Displays search label and input", () => {
+    // Find language picker title and input labelss
+    cy.get('[data-testid="search_label"]').contains("Search");
+
+    cy.get('[data-testid="search_input"]').should("be.empty");
   });
 });
