@@ -67,10 +67,10 @@ export default function Homepage() {
         </div>
 
         <div data-testid="features">
-          <h3>
+          <p>
             Our high quality, long- lasting products provide optimal
             anti-corrosion protection
-          </h3>
+          </p>
 
           <hr />
 
