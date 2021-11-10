@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import ButtonLink from "components/molecules/ButtonLink";
+
 export default function Header(): JSX.Element {
   return (
     <header>

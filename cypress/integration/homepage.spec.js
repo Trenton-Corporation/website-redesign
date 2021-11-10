@@ -61,3 +61,49 @@ describe("Header", () => {
     cy.get('[data-testid="search_input"]').should("be.empty");
   });
 });
+
+describe("Section 1", () => {
+  it("Displays title & subtitle", () => {
+    // Find headers and confirm their text
+    cy.get('[data-testid="section_one"]').contains(
+      "h2",
+      "Effective, long-lasting anti-corrosion protection above and below ground"
+    );
+
+    cy.get('[data-testid="section_one"]').contains(
+      "h3",
+      "Anti-corrosion wraps, wax coatings, casing fillers, and marine pile protection systems worldwide for oil, gas, water, and chemical processing companies."
+    );
+  });
+
+  it("Displays 'Call Us' and 'Send A Message' links", () => {
+    // Find all 'Call Us' and 'Send a message' links & make sure they work
+    cy.get("a")
+      .contains("Call us")
+      .each(($link) => {
+        expect($link).to.have.attr("href", "tel:+17344243600");
+      });
+
+    cy.get("a")
+      .contains("Send a message")
+      .each(($link) => {
+        expect($link).to.have.attr("href", "/contact");
+      });
+  });
+
+  it.skip("Displays visual", () => {
+    // Make sure the visual is rendered and visible; will fail until image is added.
+    cy.get('[data-testid="section_one"]')
+      .find("img")
+      .should("exist")
+      .and("be.visible");
+  });
+
+  it("Displays social proof", () => {
+    // Find all 'Call Us' and 'Send a message' links & make sure they work
+    cy.get('[data-testid="section_one"]').contains(
+      "p",
+      "Our products are easy to use and don’t require special tools. Thousands of miles of pipelines worldwide are protected by Trenton systems."
+    );
+  });
+});
