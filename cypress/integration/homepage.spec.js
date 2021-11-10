@@ -62,7 +62,7 @@ describe("Header", () => {
   });
 });
 
-describe("Section 1", () => {
+describe("Section one (above the fold)", () => {
   it("Displays title & subtitle", () => {
     // Find headers and confirm their text
     cy.get('[data-testid="section_one"]').contains(
@@ -105,5 +105,45 @@ describe("Section 1", () => {
       "p",
       "Our products are easy to use and don’t require special tools. Thousands of miles of pipelines worldwide are protected by Trenton systems."
     );
+  });
+});
+
+describe("Section two", () => {
+  it("Displays title & subtitle", () => {
+    // Find headers and confirm their text
+    cy.get('[data-testid="section_two"]').contains(
+      "h2",
+      "Since 1949 the Trenton Corporation has offered a range of wax-based anti-corrosion products to protect pipelines"
+    );
+
+    cy.get('[data-testid="section_two"]').contains(
+      "h3",
+      "Our high quality, long- lasting products provide optimal anti-corrosion protection"
+    );
+  });
+
+  it.skip("Displays visual", () => {
+    // Make sure the visual is rendered and visible; will fail until images are added.
+    cy.get('[data-testid="section_two"]')
+      .find("img")
+      .should("exist")
+      .and("have.length", 4)
+      .and("be.visible");
+  });
+
+  it("Displays product features", () => {
+    // Find main navigation links and check their link text
+    cy.get('[data-testid="features"]')
+      .should("contain", "No special tools required")
+      .and("contain", "Easy application")
+      .and("contain", "User friendly")
+      .and("contain", "Minimal surface preparation")
+      .and("contain", "Conformable to irregular surfaces")
+      .and("contain", "Removable for inspection")
+      .and("contain", "Compatible with other coatings")
+      .and("contain", "No drying or curing time before backfill")
+      .and("contain", "Environmentally friendly")
+      .and("contain", "Clean MSDS")
+      .and("contain", "Noncarcinogenic");
   });
 });
