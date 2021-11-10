@@ -133,7 +133,7 @@ describe("Section two", () => {
 
   it("Displays product features", () => {
     // Find main navigation links and check their link text
-    cy.get('[data-testid="features"] > ul > li')
+    cy.get('[data-testid="features"]')
       .should("contain", "No special tools required")
       .and("contain", "Easy application")
       .and("contain", "User friendly")
