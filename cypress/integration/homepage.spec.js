@@ -151,9 +151,9 @@ describe("Section two", () => {
 describe("Section three", () => {
   it("Displays title", () => {
     // Find header and confirm its text
-    cy.get('[data-testid="section_two"]').contains(
+    cy.get('[data-testid="section_three"]').contains(
       "h2",
-      "Since 1949 the Trenton Corporation has offered a range of wax-based anti-corrosion products to protect pipelines"
+      "These systems are used by major oil, gas, water and chemical processing companies worldwide."
     );
   });
 });
