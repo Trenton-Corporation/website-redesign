@@ -62,7 +62,7 @@ describe("Header", () => {
   });
 });
 
-describe("Section 1", () => {
+describe("Section one (above the fold)", () => {
   it("Displays title & subtitle", () => {
     // Find headers and confirm their text
     cy.get('[data-testid="section_one"]').contains(
@@ -104,6 +104,21 @@ describe("Section 1", () => {
     cy.get('[data-testid="section_one"]').contains(
       "p",
       "Our products are easy to use and don’t require special tools. Thousands of miles of pipelines worldwide are protected by Trenton systems."
+    );
+  });
+});
+
+describe("Section two", () => {
+  it("Displays title & subtitle", () => {
+    // Find headers and confirm their text
+    cy.get('[data-testid="section_two"]').contains(
+      "h2",
+      "Since 1949 the Trenton Corporation has offered a range of wax-based anti-corrosion products to protect pipelines"
+    );
+
+    cy.get('[data-testid="section_two"]').contains(
+      "h3",
+      "Our high quality, long- lasting products provide optimal anti-corrosion protection"
     );
   });
 });
