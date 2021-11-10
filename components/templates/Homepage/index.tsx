@@ -53,16 +53,10 @@ export default function Homepage() {
 
       <section data-testid="section_two">
         <div>
-          <div>
-            <h2>
-              Since 1949 the Trenton Corporation has offered a range of
-              wax-based anti-corrosion products to protect pipelines
-            </h2>
-            <h3>
-              Our high quality, long- lasting products provide optimal
-              anti-corrosion protection
-            </h3>
-          </div>
+          <h2>
+            Since 1949 the Trenton Corporation has offered a range of wax-based
+            anti-corrosion products to protect pipelines
+          </h2>
 
           <div>
             <img src="" alt="" />
@@ -70,6 +64,29 @@ export default function Homepage() {
             <img src="" alt="" />
             <img src="" alt="" />
           </div>
+        </div>
+
+        <div data-testid="features">
+          <h3>
+            Our high quality, long- lasting products provide optimal
+            anti-corrosion protection
+          </h3>
+
+          <hr />
+
+          <ul>
+            <li>No special tools required</li>
+            <li>Easy application</li>
+            <li>User friendly</li>
+            <li>Minimal surface preparation</li>
+            <li>Conformable to irregular surfaces</li>
+            <li>Removable for inspection</li>
+            <li>Compatible with other coatings</li>
+            <li>No drying or curing time before backfill</li>
+            <li>Environmentally friendly</li>
+            <li>Clean MSDS</li>
+            <li>Noncarcinogenic</li>
+          </ul>
         </div>
       </section>
     </Layout>
