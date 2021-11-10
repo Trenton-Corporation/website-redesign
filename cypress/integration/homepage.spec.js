@@ -78,17 +78,17 @@ describe("Section 1", () => {
 
   it("Displays 'Call Us' and 'Send A Message' links", () => {
     // Find all 'Call Us' and 'Send a message' links & make sure they work
-    cy.get(".callUsLink").each(($link) => {
-      const text = $link.text();
-      expect(text).contains("Call us");
-      expect($link).to.have.attr("href", "tel:+17344243600");
-    });
+    cy.get("a")
+      .contains("Call us")
+      .each(($link) => {
+        expect($link).to.have.attr("href", "tel:+17344243600");
+      });
 
-    cy.get(".sendAMessageLink").each(($link) => {
-      const text = $link.text();
-      expect(text).contains("Send a message");
-      expect($link).to.have.attr("href", "/contact");
-    });
+    cy.get("a")
+      .contains("Send a message")
+      .each(($link) => {
+        expect($link).to.have.attr("href", "/contact");
+      });
   });
 
   it.skip("Displays visual", () => {
