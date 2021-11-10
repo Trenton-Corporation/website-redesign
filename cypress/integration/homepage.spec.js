@@ -117,7 +117,7 @@ describe("Section two", () => {
     );
 
     cy.get('[data-testid="section_two"]').contains(
-      "h3",
+      "p",
       "Our high quality, long- lasting products provide optimal anti-corrosion protection"
     );
   });
@@ -145,5 +145,15 @@ describe("Section two", () => {
       .and("contain", "Environmentally friendly")
       .and("contain", "Clean MSDS")
       .and("contain", "Noncarcinogenic");
+  });
+});
+
+describe("Section three", () => {
+  it("Displays title", () => {
+    // Find header and confirm its text
+    cy.get('[data-testid="section_two"]').contains(
+      "h2",
+      "Since 1949 the Trenton Corporation has offered a range of wax-based anti-corrosion products to protect pipelines"
+    );
   });
 });
