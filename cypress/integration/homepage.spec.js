@@ -130,4 +130,20 @@ describe("Section two", () => {
       .and("have.length", 4)
       .and("be.visible");
   });
+
+  it("Displays product features", () => {
+    // Find main navigation links and check their link text
+    cy.get('[data-testid="features"] > ul > li')
+      .should("contain", "No special tools required")
+      .and("contain", "Easy application")
+      .and("contain", "User friendly")
+      .and("contain", "Minimal surface preparation")
+      .and("contain", "Conformable to irregular surfaces")
+      .and("contain", "Removable for inspection")
+      .and("contain", "Compatible with other coatings")
+      .and("contain", "No drying or curing time before backfill")
+      .and("contain", "Environmentally friendly")
+      .and("contain", "Clean MSDS")
+      .and("contain", "Noncarcinogenic");
+  });
 });
