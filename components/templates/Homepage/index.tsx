@@ -53,14 +53,23 @@ export default function Homepage() {
 
       <section data-testid="section_two">
         <div>
-          <h2>
-            Since 1949 the Trenton Corporation has offered a range of wax-based
-            anti-corrosion products to protect pipelines
-          </h2>
-          <h3>
-            Our high quality, long- lasting products provide optimal
-            anti-corrosion protection
-          </h3>
+          <div>
+            <h2>
+              Since 1949 the Trenton Corporation has offered a range of
+              wax-based anti-corrosion products to protect pipelines
+            </h2>
+            <h3>
+              Our high quality, long- lasting products provide optimal
+              anti-corrosion protection
+            </h3>
+          </div>
+
+          <div>
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </div>
         </div>
       </section>
     </Layout>

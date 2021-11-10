@@ -121,4 +121,13 @@ describe("Section two", () => {
       "Our high quality, long- lasting products provide optimal anti-corrosion protection"
     );
   });
+
+  it.skip("Displays visual", () => {
+    // Make sure the visual is rendered and visible; will fail until images are added.
+    cy.get('[data-testid="section_two"]')
+      .find("img")
+      .should("exist")
+      .and("have.length", 4)
+      .and("be.visible");
+  });
 });
