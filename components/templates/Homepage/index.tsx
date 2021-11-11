@@ -89,6 +89,27 @@ export default function Homepage() {
           </ul>
         </div>
       </section>
+
+      <section data-testid="section_three">
+        <h2>
+          These systems are used by major oil, gas, water and chemical
+          processing companies worldwide.
+        </h2>
+        <div>
+          <div>
+            <p>Non-toxic coating for pipelines</p>
+            <img src="" alt="" />
+          </div>
+          <div>
+            <p>Valve, Flange and Piping Protection</p>
+            <img src="" alt="" />
+          </div>
+          <div>
+            <p>Atmospheric piping protection</p>
+            <img src="" alt="" />
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }
