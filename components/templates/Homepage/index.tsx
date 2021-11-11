@@ -176,6 +176,7 @@ export default function Homepage() {
 
       <footer data-testid="footer">
         <div>
+          <h4>Stay in touch</h4>
           <ul data-testid="social">
             <li>
               <a href="https://www.youtube.com/user/TrentonCorpVideos?feature=watch">
