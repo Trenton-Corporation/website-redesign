@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer data-testid="footer">
       <div>
-        <h4>Stay in touch</h4>
+        <h3>Stay in touch</h3>
         <ul data-testid="social">
           <li>
             <a href="https://www.youtube.com/user/TrentonCorpVideos?feature=watch">
@@ -21,7 +21,7 @@ export default function Footer() {
         </ul>
 
         <div data-testid="products">
-          <h4>Products</h4>
+          <h3>Products</h3>
           <ul>
             <li>
               <Link href="/products/wax-tape-brand-anticorrosion-wraps/">
