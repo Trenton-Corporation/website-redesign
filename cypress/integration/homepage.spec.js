@@ -248,4 +248,14 @@ describe("Footer", () => {
         "https://www.linkedin.com/company/trenton-corporation-anticorrosion-materials"
       );
   });
+
+  it("Displays links to product pages", () => {
+    cy.get("[data-testid=products]")
+      .should("contain", "Wax-Tape® Brand Anticorrosion Wraps")
+      .and("contain", "Primers & Other Products")
+      .and("contain", "Innercoat® Hot-Applied Wax Coating System")
+      .and("contain", "Outerwraps")
+      .and("contain", "Casing Filling")
+      .and("contain", "Patch-Pad® Exothermic Weld Protector");
+  });
 });
