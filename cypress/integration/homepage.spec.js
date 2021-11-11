@@ -231,16 +231,21 @@ describe("Section five", () => {
 describe("Footer", () => {
   it("Displays social media links", () => {
     // Find all social links and check hrefs
-    cy.contains("a", "YouTube").should(
-      "have.attr",
-      "href",
-      "https://www.youtube.com/user/TrentonCorpVideos?feature=watch"
-    );
 
-    cy.contains("a", "LinkedIn").should(
-      "have.attr",
-      "href",
-      "https://www.linkedin.com/company/trenton-corporation-anticorrosion-materials"
-    );
+    cy.get('[data-testid="footer"]')
+      .contains("a", "YouTube")
+      .should(
+        "have.attr",
+        "href",
+        "https://www.youtube.com/user/TrentonCorpVideos?feature=watch"
+      );
+
+    cy.get('[data-testid="footer"]')
+      .contains("a", "LinkedIn")
+      .should(
+        "have.attr",
+        "href",
+        "https://www.linkedin.com/company/trenton-corporation-anticorrosion-materials"
+      );
   });
 });

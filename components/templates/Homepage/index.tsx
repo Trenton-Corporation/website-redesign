@@ -174,7 +174,7 @@ export default function Homepage() {
         </div>
       </section>
 
-      <footer>
+      <footer data-testid="footer">
         <div>
           <ul data-testid="social">
             <li>
