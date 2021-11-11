@@ -1,7 +1,18 @@
 describe("Homepage", () => {
-  it("successfully loads", () => {
+  it("Successfully loads", () => {
     // Start on homepage
     cy.visit("http://localhost:3000/");
+  });
+
+  it("Displays all 'Call Us' and 'Send A Message' links", () => {
+    // Find all 'Call Us' and 'Send a message' links & make sure they work
+    cy.get("a:contains(Call us)").each(($link) => {
+      expect($link).to.have.attr("href", "tel:+17344243600");
+    });
+
+    cy.get("a:contains(Send a message)").each(($link) => {
+      expect($link).to.have.attr("href", "/contact");
+    });
   });
 });
 
@@ -76,21 +87,6 @@ describe("Section one (above the fold)", () => {
     );
   });
 
-  it("Displays 'Call Us' and 'Send A Message' links", () => {
-    // Find all 'Call Us' and 'Send a message' links & make sure they work
-    cy.get("a")
-      .contains("Call us")
-      .each(($link) => {
-        expect($link).to.have.attr("href", "tel:+17344243600");
-      });
-
-    cy.get("a")
-      .contains("Send a message")
-      .each(($link) => {
-        expect($link).to.have.attr("href", "/contact");
-      });
-  });
-
   it.skip("Displays visual", () => {
     // Make sure the visual is rendered and visible; will fail until image is added.
     cy.get('[data-testid="section_one"]')
@@ -117,7 +113,7 @@ describe("Section two", () => {
     );
 
     cy.get('[data-testid="section_two"]').contains(
-      "h3",
+      "p",
       "Our high quality, long- lasting products provide optimal anti-corrosion protection"
     );
   });
@@ -145,5 +141,121 @@ describe("Section two", () => {
       .and("contain", "Environmentally friendly")
       .and("contain", "Clean MSDS")
       .and("contain", "Noncarcinogenic");
+  });
+});
+
+describe("Section three", () => {
+  it("Displays title", () => {
+    // Find header and confirm its text
+    cy.get('[data-testid="section_three"]').contains(
+      "h2",
+      "These systems are used by major oil, gas, water and chemical processing companies worldwide."
+    );
+  });
+
+  it("Displays product titles", () => {
+    // Find product titles and confirm their text
+    cy.get('[data-testid="section_three"]')
+      .should("contain", "Non-toxic coating for pipelines")
+      .and("contain", "Valve, Flange and Piping Protection")
+      .and("contain", "Atmospheric piping protection");
+  });
+
+  it.skip("Displays images", () => {
+    // Make sure all images are rendered and visible; will fail until images are added.
+    cy.get('[data-testid="section_three"]')
+      .find("img")
+      .should("exist")
+      .and("have.length", 3)
+      .and("be.visible");
+  });
+});
+
+describe("Frequently asked questions", () => {
+  it("Displays title", () => {
+    // Find header and confirm its text
+    cy.get('[data-testid="faq"]').contains("h2", "Frequently Asked Questions");
+  });
+
+  it("Displays questions and answers", () => {
+    // Find all questions and confirm their text
+    cy.get('[data-testid="faq"]')
+      .should(
+        "contain",
+        "Where are your products manufactured? Are they made in the USA?"
+      )
+      .and(
+        "contain",
+        "Trenton products are manufactured on-site, in the United States, at our facility in Ann Arbor, Michigan."
+      )
+      .and(
+        "contain",
+        "Do Trenton’s anti-corrosion wraps provide aboveground and belowground protection?"
+      )
+      .and(
+        "contain",
+        "Yes. Wax-Tape®#1 non-firming anticorrosion wrap resists corrosion on belowground pipe, including wet and irregular surfaces."
+      )
+      .and(
+        "contain",
+        "Wax-Tape® #2 self-firming anticorrosion wrap resists atmospheric corrosion on aboveground and belowground pipe, bridge crossings, vaults, and other straight or irregular surfaces."
+      )
+      .and("contain", "Where can I ask questions or place an order?");
+  });
+});
+
+describe("Section five", () => {
+  it.skip("Displays images", () => {
+    // Make sure all images are rendered and visible; will fail until images are added.
+    cy.get('[data-testid="section_five"]')
+      .find("img")
+      .should("exist")
+      .and("have.length", 4)
+      .and("be.visible");
+  });
+
+  it("Displays call-to-action & info", () => {
+    // Find headers and confirm their text
+    cy.get('[data-testid="section_five"]').contains(
+      "h2",
+      "Thousands of miles of pipelines worldwide are protected by Trenton systems"
+    );
+
+    cy.get('[data-testid="section_five"]').contains(
+      "p",
+      "Oil, gas, water and chemical processing companies worldwide rely on Trenton products to protect the environment and their resources."
+    );
+  });
+});
+
+describe("Footer", () => {
+  it("Displays social media links", () => {
+    // Find all social links and check hrefs
+
+    cy.get('[data-testid="footer"]')
+      .contains("a", "YouTube")
+      .should(
+        "have.attr",
+        "href",
+        "https://www.youtube.com/user/TrentonCorpVideos?feature=watch"
+      );
+
+    cy.get('[data-testid="footer"]')
+      .contains("a", "LinkedIn")
+      .should(
+        "have.attr",
+        "href",
+        "https://www.linkedin.com/company/trenton-corporation-anticorrosion-materials"
+      );
+  });
+
+  it("Displays links to product pages", () => {
+    cy.get("[data-testid=products]")
+      .should("contain", "Wax-Tape® Brand Anticorrosion Wraps")
+      .and("contain", "Primers & Other Products")
+      .and("contain", "Innercoat® Hot-Applied Wax Coating System")
+      .and("contain", "Outerwraps")
+      .and("contain", "Casing Filling")
+      .and("contain", "Patch-Pad® Exothermic Weld Protector");
   });
 });

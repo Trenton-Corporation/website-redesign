@@ -1,5 +1,7 @@
 import Layout from "../Layout";
-import ButtonLink from "components/molecules/ButtonLink";
+import CallUsButtonLink from "components/molecules/CallUsButtonLink";
+import SendAMessageButtonLink from "components/molecules/SendAMessageButtonLink";
+import MainNavLinks from "components/molecules/MainNavLinks";
 
 export default function Homepage() {
   return (
@@ -19,20 +21,11 @@ export default function Homepage() {
           <div>
             <ul>
               <li>
-                <ButtonLink
-                  className="callUsLink"
-                  href="tel:+17344243600"
-                  text="Call us"
-                />
+                <CallUsButtonLink />
               </li>
 
               <li>
-                <ButtonLink
-                  isNextLink={true}
-                  className="sendAMessageLink"
-                  href="/contact"
-                  text="Send a message"
-                />
+                <SendAMessageButtonLink />
               </li>
             </ul>
           </div>
@@ -86,6 +79,96 @@ export default function Homepage() {
             <li>Environmentally friendly</li>
             <li>Clean MSDS</li>
             <li>Noncarcinogenic</li>
+          </ul>
+        </div>
+      </section>
+
+      <section data-testid="section_three">
+        <h2>
+          These systems are used by major oil, gas, water and chemical
+          processing companies worldwide.
+        </h2>
+        <div>
+          <div>
+            <p>Non-toxic coating for pipelines</p>
+            <img src="" alt="" />
+          </div>
+
+          <div>
+            <p>Valve, Flange and Piping Protection</p>
+            <img src="" alt="" />
+          </div>
+
+          <div>
+            <p>Atmospheric piping protection</p>
+            <img src="" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section data-testid="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <div>
+          <div>
+            <h3>
+              Where are your products manufactured? Are they made in the USA?
+            </h3>
+            <p>
+              Trenton products are manufactured on-site, in the United States,
+              at our facility in Ann Arbor, Michigan.
+            </p>
+          </div>
+
+          <div>
+            <h3>
+              Do Trenton’s anti-corrosion wraps provide aboveground and
+              belowground protection?
+            </h3>
+            <p>
+              Yes. Wax-Tape®#1 non-firming anticorrosion wrap resists corrosion
+              on belowground pipe, including wet and irregular surfaces.
+              Wax-Tape® #2 self-firming anticorrosion wrap resists atmospheric
+              corrosion on aboveground and belowground pipe, bridge crossings,
+              vaults, and other straight or irregular surfaces.
+            </p>
+          </div>
+
+          <div>
+            <h3>Where can I ask questions or place an order?</h3>
+            <div>
+              <ul>
+                <li>
+                  <CallUsButtonLink />
+                </li>
+
+                <li>
+                  <SendAMessageButtonLink />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-testid="section_five">
+        <h2>
+          Thousands of miles of pipelines worldwide are protected by Trenton
+          systems
+        </h2>
+        <p>
+          Oil, gas, water and chemical processing companies worldwide rely on
+          Trenton products to protect the environment and their resources.
+        </p>
+        <div>
+          <ul>
+            <li>
+              <CallUsButtonLink />
+            </li>
+
+            <li>
+              <SendAMessageButtonLink />
+            </li>
           </ul>
         </div>
       </section>
