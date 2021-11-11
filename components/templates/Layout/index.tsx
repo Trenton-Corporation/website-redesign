@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Header from "components/organisms/Header";
+import Footer from "components/organisms/Footer";
 
 export default function Layout(props: {
   title?: string;
@@ -17,7 +18,7 @@ export default function Layout(props: {
       </Head>
       <Header />
       <main>{props.children}</main>
-      <footer></footer>
+      <Footer />
     </>
   );
 }
