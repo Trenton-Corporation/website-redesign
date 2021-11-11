@@ -100,13 +100,69 @@ export default function Homepage() {
             <p>Non-toxic coating for pipelines</p>
             <img src="" alt="" />
           </div>
+
           <div>
             <p>Valve, Flange and Piping Protection</p>
             <img src="" alt="" />
           </div>
+
           <div>
             <p>Atmospheric piping protection</p>
             <img src="" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section data-testid="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <div>
+          <div>
+            <h3>
+              Where are your products manufactured? Are they made in the USA?
+            </h3>
+            <p>
+              Trenton products are manufactured on-site, in the United States,
+              at our facility in Ann Arbor, Michigan.
+            </p>
+          </div>
+
+          <div>
+            <h3>
+              Do Trenton’s anti-corrosion wraps provide aboveground and
+              belowground protection?
+            </h3>
+            <p>
+              Yes. Wax-Tape®#1 non-firming anticorrosion wrap resists corrosion
+              on belowground pipe, including wet and irregular surfaces.
+              Wax-Tape® #2 self-firming anticorrosion wrap resists atmospheric
+              corrosion on aboveground and belowground pipe, bridge crossings,
+              vaults, and other straight or irregular surfaces.
+            </p>
+          </div>
+
+          <div>
+            <h3>Where can I ask questions or place an order?</h3>
+            <div>
+              <ul>
+                <li>
+                  <ButtonLink
+                    className="callUsLink"
+                    href="tel:+17344243600"
+                    text="Call us"
+                  />
+                </li>
+
+                <li>
+                  <ButtonLink
+                    isNextLink={true}
+                    className="sendAMessageLink"
+                    href="/contact"
+                    text="Send a message"
+                  />
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
