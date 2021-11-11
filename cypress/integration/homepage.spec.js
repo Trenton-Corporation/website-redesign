@@ -156,4 +156,21 @@ describe("Section three", () => {
       "These systems are used by major oil, gas, water and chemical processing companies worldwide."
     );
   });
+
+  it("Displays product titles", () => {
+    // Find product titles and confirm their text
+    cy.get('[data-testid="section_three"]')
+      .should("contain", "Non-toxic coating for pipelines")
+      .and("contain", "Valve, Flange and Piping Protection")
+      .and("contain", "Atmospheric piping protection");
+  });
+
+  it.skip("Displays images", () => {
+    // Make sure all images are rendered and visible; will fail until images are added.
+    cy.get('[data-testid="section_three"]')
+      .find("img")
+      .should("exist")
+      .and("have.length", 3)
+      .and("be.visible");
+  });
 });
