@@ -1,5 +1,7 @@
 import Layout from "../Layout";
-import ButtonLink from "components/molecules/ButtonLink";
+
+import CallUsButtonLink from "components/molecules/CallUsButtonLink";
+import SendAMessageButtonLink from "components/molecules/SendAMessageButtonLink";
 
 export default function Homepage() {
   return (
@@ -19,20 +21,11 @@ export default function Homepage() {
           <div>
             <ul>
               <li>
-                <ButtonLink
-                  className="callUsLink"
-                  href="tel:+17344243600"
-                  text="Call us"
-                />
+                <CallUsButtonLink />
               </li>
 
               <li>
-                <ButtonLink
-                  isNextLink={true}
-                  className="sendAMessageLink"
-                  href="/contact"
-                  text="Send a message"
-                />
+                <SendAMessageButtonLink />
               </li>
             </ul>
           </div>
@@ -146,20 +139,11 @@ export default function Homepage() {
             <div>
               <ul>
                 <li>
-                  <ButtonLink
-                    className="callUsLink"
-                    href="tel:+17344243600"
-                    text="Call us"
-                  />
+                  <CallUsButtonLink />
                 </li>
 
                 <li>
-                  <ButtonLink
-                    isNextLink={true}
-                    className="sendAMessageLink"
-                    href="/contact"
-                    text="Send a message"
-                  />
+                  <SendAMessageButtonLink />
                 </li>
               </ul>
             </div>
