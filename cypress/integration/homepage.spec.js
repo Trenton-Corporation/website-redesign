@@ -1,7 +1,18 @@
 describe("Homepage", () => {
-  it("successfully loads", () => {
+  it("Successfully loads", () => {
     // Start on homepage
     cy.visit("http://localhost:3000/");
+  });
+
+  it("Displays 'Call Us' and 'Send A Message' links", () => {
+    // Find all 'Call Us' and 'Send a message' links & make sure they work
+    cy.get("a:contains(Call us)").each(($link) => {
+      expect($link).to.have.attr("href", "tel:+17344243600");
+    });
+
+    cy.get("a:contains(Send a message)").each(($link) => {
+      expect($link).to.have.attr("href", "/contact");
+    });
   });
 });
 
@@ -74,21 +85,6 @@ describe("Section one (above the fold)", () => {
       "h3",
       "Anti-corrosion wraps, wax coatings, casing fillers, and marine pile protection systems worldwide for oil, gas, water, and chemical processing companies."
     );
-  });
-
-  it("Displays 'Call Us' and 'Send A Message' links", () => {
-    // Find all 'Call Us' and 'Send a message' links & make sure they work
-    cy.get("a")
-      .contains("Call us")
-      .each(($link) => {
-        expect($link).to.have.attr("href", "tel:+17344243600");
-      });
-
-    cy.get("a")
-      .contains("Send a message")
-      .each(($link) => {
-        expect($link).to.have.attr("href", "/contact");
-      });
   });
 
   it.skip("Displays visual", () => {
@@ -172,5 +168,36 @@ describe("Section three", () => {
       .should("exist")
       .and("have.length", 3)
       .and("be.visible");
+  });
+});
+
+describe("Frequently asked questions", () => {
+  it("Displays title", () => {
+    // Find header and confirm its text
+    cy.get('[data-testid="faq"]').contains("h2", "Frequently Asked Questions");
+  });
+
+  it("Displays questions and answers", () => {
+    // Find all questions and confirm their text
+    cy.get('[data-testid="faq"]')
+      .should(
+        "contain",
+        "Where are your products manufactured? Are they made in the USA?"
+      )
+      .should(
+        "contain",
+        "Trenton products are manufactured on-site, in the United States, at our facility in Ann Arbor, Michigan."
+      )
+      .and(
+        "contain",
+        "Do Trenton’s anti-corrosion wraps provide aboveground and belowground protection?"
+      )
+      .should(
+        "contain",
+        `Yes. Wax-Tape®#1 non-firming anticorrosion wrap resists corrosion on belowground pipe, including wet and irregular surfaces.
+
+      Wax-Tape® #2 self-firming anticorrosion wrap resists atmospheric corrosion on aboveground and belowground pipe, bridge crossings, vaults, and other straight or irregular surfaces.`
+      )
+      .and("contain", "Where can I ask questions or place an order?");
   });
 });
