@@ -184,7 +184,7 @@ describe("Frequently asked questions", () => {
         "contain",
         "Where are your products manufactured? Are they made in the USA?"
       )
-      .should(
+      .and(
         "contain",
         "Trenton products are manufactured on-site, in the United States, at our facility in Ann Arbor, Michigan."
       )
@@ -192,11 +192,13 @@ describe("Frequently asked questions", () => {
         "contain",
         "Do Trenton’s anti-corrosion wraps provide aboveground and belowground protection?"
       )
-      .should(
+      .and(
         "contain",
-        `Yes. Wax-Tape®#1 non-firming anticorrosion wrap resists corrosion on belowground pipe, including wet and irregular surfaces.
-
-      Wax-Tape® #2 self-firming anticorrosion wrap resists atmospheric corrosion on aboveground and belowground pipe, bridge crossings, vaults, and other straight or irregular surfaces.`
+        "Yes. Wax-Tape®#1 non-firming anticorrosion wrap resists corrosion on belowground pipe, including wet and irregular surfaces."
+      )
+      .and(
+        "contain",
+        "Wax-Tape® #2 self-firming anticorrosion wrap resists atmospheric corrosion on aboveground and belowground pipe, bridge crossings, vaults, and other straight or irregular surfaces."
       )
       .and("contain", "Where can I ask questions or place an order?");
   });
