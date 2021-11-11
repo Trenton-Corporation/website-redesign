@@ -2,6 +2,7 @@ import Layout from "../Layout";
 
 import CallUsButtonLink from "components/molecules/CallUsButtonLink";
 import SendAMessageButtonLink from "components/molecules/SendAMessageButtonLink";
+import MainNavLinks from "components/molecules/MainNavLinks";
 
 export default function Homepage() {
   return (
@@ -150,6 +151,53 @@ export default function Homepage() {
           </div>
         </div>
       </section>
+
+      <section data-testid="section_five">
+        <h2>
+          Thousands of miles of pipelines worldwide are protected by Trenton
+          systems
+        </h2>
+        <p>
+          Oil, gas, water and chemical processing companies worldwide rely on
+          Trenton products to protect the environment and their resources.
+        </p>
+        <div>
+          <ul>
+            <li>
+              <CallUsButtonLink />
+            </li>
+
+            <li>
+              <SendAMessageButtonLink />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        <div>
+          <ul data-testid="social">
+            <li>
+              <a href="https://www.youtube.com/user/TrentonCorpVideos?feature=watch">
+                YouTube
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/trenton-corporation-anticorrosion-materials">
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+
+          <div>Products</div>
+        </div>
+        <hr />
+        <div>
+          <nav data-testid="main_navigation">
+            <MainNavLinks />
+          </nav>
+        </div>
+      </footer>
     </Layout>
   );
 }

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import ButtonLink from "components/molecules/ButtonLink";
+import MainNavLinks from "components/molecules/MainNavLinks";
 
 export default function Header(): JSX.Element {
   return (
@@ -49,35 +49,7 @@ export default function Header(): JSX.Element {
         </div>
       </div>
 
-      <nav data-testid="main_navigation">
-        <ul>
-          <li>
-            <Link href="/home">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/company">
-              <a>Company</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/products">
-              <a>Products</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/info">
-              <a>Info Library</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact">
-              <a>Contact</a>
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <MainNavLinks />
 
       <div>
         <label htmlFor="search" data-testid="search_label">

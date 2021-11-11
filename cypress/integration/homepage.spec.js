@@ -4,7 +4,7 @@ describe("Homepage", () => {
     cy.visit("http://localhost:3000/");
   });
 
-  it("Displays 'Call Us' and 'Send A Message' links", () => {
+  it("Displays all 'Call Us' and 'Send A Message' links", () => {
     // Find all 'Call Us' and 'Send a message' links & make sure they work
     cy.get("a:contains(Call us)").each(($link) => {
       expect($link).to.have.attr("href", "tel:+17344243600");
@@ -201,5 +201,46 @@ describe("Frequently asked questions", () => {
         "Wax-Tape® #2 self-firming anticorrosion wrap resists atmospheric corrosion on aboveground and belowground pipe, bridge crossings, vaults, and other straight or irregular surfaces."
       )
       .and("contain", "Where can I ask questions or place an order?");
+  });
+});
+
+describe("Section five", () => {
+  it.skip("Displays images", () => {
+    // Make sure all images are rendered and visible; will fail until images are added.
+    cy.get('[data-testid="section_five"]')
+      .find("img")
+      .should("exist")
+      .and("have.length", 4)
+      .and("be.visible");
+  });
+
+  it("Displays call-to-action & info", () => {
+    // Find headers and confirm their text
+    cy.get('[data-testid="section_five"]').contains(
+      "h2",
+      "Thousands of miles of pipelines worldwide are protected by Trenton systems"
+    );
+
+    cy.get('[data-testid="section_five"]').contains(
+      "p",
+      "Oil, gas, water and chemical processing companies worldwide rely on Trenton products to protect the environment and their resources."
+    );
+  });
+});
+
+describe("Footer", () => {
+  it("Displays social media links", () => {
+    // Find all social links and check hrefs
+    cy.contains("a", "YouTube").should(
+      "have.attr",
+      "href",
+      "https://www.youtube.com/user/TrentonCorpVideos?feature=watch"
+    );
+
+    cy.contains("a", "LinkedIn").should(
+      "have.attr",
+      "href",
+      "https://www.linkedin.com/company/trenton-corporation-anticorrosion-materials"
+    );
   });
 });
