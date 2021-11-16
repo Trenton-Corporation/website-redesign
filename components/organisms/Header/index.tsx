@@ -5,12 +5,12 @@ import MainNavLinks from "components/molecules/MainNavLinks";
 
 export default function Header(): JSX.Element {
   return (
-    <header className="text-gray-900 ring-4 ring-black ring-opacity-10">
+    <header className="text-gray-500 ring ring-black ring-opacity-5">
       <div className="container mx-auto p-4">
         <div className=" text-center">
           <Link href="/">
             <a data-testid="logo">
-              <h1 className="invisible">Trenton Corporation</h1>
+              <h1 className=" text-white text-xs">Trenton Corporation</h1>
               <Image
                 src="/companyLogo.gif"
                 width="222"
@@ -20,11 +20,11 @@ export default function Header(): JSX.Element {
             </a>
           </Link>
 
-          <address className="hidden md:visible">
+          <address className="hidden sm:block">
             <a
               data-testid="email"
               href="mailto:trenton@trentoncorp.com"
-              className=" not-italic hover:text-red-800 focus:text-red-800 visited:text-purple-600"
+              className=" not-italic hover:hover:text-black focus:text-red-800 visited:text-purple-600"
             >
               trenton@trentoncorp.com
             </a>
@@ -32,14 +32,14 @@ export default function Header(): JSX.Element {
             <a
               data-testid="address"
               href="https://goo.gl/maps/R2QPKQwxUqhZg7k68"
-              className=" not-italic hover:text-red-800 focus:text-red-800 visited:text-purple-600"
+              className=" not-italic hover:hover:text-black focus:text-red-800 visited:text-purple-600"
             >
               7700 Jackson Rd, Ann Arbor, MI 48103
             </a>
           </address>
         </div>
 
-        <div data-testid="language_picker" className="hidden md:visible">
+        <div data-testid="language_picker" className="hidden sm:block">
           <p>Choose language:</p>
 
           <div>
@@ -60,10 +60,10 @@ export default function Header(): JSX.Element {
 
         <MainNavLinks
           className="flex flex-col justify-center items-center font-bold"
-          childClassName="py-4 hover:text-red-800 focus:text-red-800 visited:text-purple-600"
+          childClassName="py-4 hover:text-black focus:text-red-800 visited:text-purple-600"
         />
 
-        <div className="hidden md:visible">
+        <div className="hidden sm:block">
           <label htmlFor="search" data-testid="search_label">
             Search
           </label>
@@ -75,7 +75,6 @@ export default function Header(): JSX.Element {
           />
         </div>
       </div>
-      <hr />
     </header>
   );
 }
