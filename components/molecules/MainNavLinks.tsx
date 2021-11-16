@@ -7,7 +7,7 @@ export default function MainNavLinks(props: {
   return (
     <ul className={props.className}>
       <li className={props.childClassName}>
-        <Link href="/home">
+        <Link href="/">
           <a>Home</a>
         </Link>
       </li>
