@@ -6,8 +6,8 @@ import MainNavLinks from "components/molecules/MainNavLinks";
 export default function Header(): JSX.Element {
   return (
     <header className="font-sans text-gray-500 ring ring-black ring-opacity-5">
-      <div className="container mx-auto p-4">
-        <div className=" text-center">
+      <div className="container mx-auto p-4 md:grid md:grid-rows-2 md:grid-cols-2 md:gap-4">
+        <div className=" text-center md:w-32">
           <Link href="/">
             <a data-testid="logo" className="py-4">
               <h1 className=" text-white text-xs">Trenton Corporation</h1>
