@@ -59,7 +59,7 @@ export default function Header(): JSX.Element {
         </div>
 
         <MainNavLinks
-          className="flex flex-col justify-center items-center font-bold"
+          className="flex flex-col justify-center items-center font-bold md:font-normal"
           childClassName="py-4 hover:text-black focus:text-red-800 visited:text-purple-600"
         />
 
