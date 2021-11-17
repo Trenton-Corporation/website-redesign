@@ -6,8 +6,8 @@ import MainNavLinks from "components/molecules/MainNavLinks";
 export default function Header(): JSX.Element {
   return (
     <header className="font-sans text-gray-500 ring ring-black ring-opacity-5">
-      <div className="container mx-auto p-4 md:grid md:grid-cols-1 md:grid-rows-3 md:gap-8">
-        <address className="hidden md:flex md:flex-row md:flex-nowrap">
+      <div className="container mx-auto p-4 md:grid md:grid-cols-1 md:grid-rows-1 md:gap-2">
+        <address className="hidden md:inline">
           <a
             data-testid="email"
             href="mailto:trenton@trentoncorp.com"
@@ -43,45 +43,40 @@ export default function Header(): JSX.Element {
               childClassName="py-4 hover:text-black focus:text-red-800 visited:text-purple-600"
             />
           </div>
+        </div>
 
-          <div className="hidden md:flex md:flex-row md:flex-wrap">
-            <div className="hidden md:flex md:flex-row space-x-4">
-              <label htmlFor="search" data-testid="search_label">
-                Search
-              </label>
-              <input
-                type="search"
-                name="query"
-                id="search"
-                data-testid="search_input"
-              />
+        <div className="hidden md:flex md:flex-row md:flex-wrap">
+          <div className="hidden md:flex md:flex-row space-x-4">
+            <label htmlFor="search" data-testid="search_label">
+              Search
+            </label>
+            <input
+              type="search"
+              name="query"
+              id="search"
+              data-testid="search_input"
+            />
+          </div>
+
+          <div
+            data-testid="language_picker"
+            className="hidden md:flex md:flex-row space-x-4"
+          >
+            <p>Choose language:</p>
+
+            <div className="flex-auto">
+              <input type="radio" id="english" name="drone" value="english" />
+              <label htmlFor="english">English</label>
             </div>
 
-            <div
-              data-testid="language_picker"
-              className="hidden md:flex md:flex-row space-x-4"
-            >
-              <p>Choose language:</p>
+            <div className="flex-auto">
+              <input type="radio" id="español" name="drone" value="español" />
+              <label htmlFor="español">Español</label>
+            </div>
 
-              <div className="flex-auto">
-                <input type="radio" id="english" name="drone" value="english" />
-                <label htmlFor="english">English</label>
-              </div>
-
-              <div className="flex-auto">
-                <input type="radio" id="español" name="drone" value="español" />
-                <label htmlFor="español">Español</label>
-              </div>
-
-              <div className="flex-auto">
-                <input
-                  type="radio"
-                  id="français"
-                  name="drone"
-                  value="français"
-                />
-                <label htmlFor="français">Français</label>
-              </div>
+            <div className="flex-auto">
+              <input type="radio" id="français" name="drone" value="français" />
+              <label htmlFor="français">Français</label>
             </div>
           </div>
         </div>
