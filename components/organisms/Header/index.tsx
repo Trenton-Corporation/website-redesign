@@ -62,9 +62,9 @@ export default function Header(): JSX.Element {
         </div>
 
         <div>
-          <div className="md:flex md:flex-row md:flex-nowrap md:items-center">
+          <div className="text-center md:flex md:flex-row md:flex-nowrap md:items-center">
             <Link href="/">
-              <a data-testid="logo" className="text-center md:flex-auto">
+              <a data-testid="logo" className="md:flex-auto">
                 <h1 className=" text-white text-xs">Trenton Corporation</h1>
                 <Image
                   src="/companyLogo.gif"
