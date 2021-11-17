@@ -8,41 +8,11 @@ export default function Header(): JSX.Element {
     <header className="font-sans text-gray-500 ring ring-black ring-opacity-5">
       <div className="container mx-auto p-4 md:grid md:grid-cols-1 md:grid-rows-1 md:gap-2">
         <div className="hidden md:flex md:flex-row md:flex-wrap">
-          <address className="hidden md:inline space-x-4">
-            <a
-              data-testid="email"
-              href="mailto:trenton@trentoncorp.com"
-              className="not-italic hover:hover:text-black focus:text-red-800 visited:text-purple-600"
-            >
-              trenton@trentoncorp.com
-            </a>
-
-            <a
-              data-testid="address"
-              href="https://goo.gl/maps/R2QPKQwxUqhZg7k68"
-              className="not-italic hover:hover:text-black focus:text-red-800 visited:text-purple-600"
-            >
-              7700 Jackson Rd, Ann Arbor, MI 48103
-            </a>
-          </address>
-
-          <div className="hidden md:flex md:flex-row">
-            <label htmlFor="search" data-testid="search_label">
-              Search
-            </label>
-            <input
-              type="search"
-              name="query"
-              id="search"
-              data-testid="search_input"
-            />
-          </div>
-
           <div
+            className="hidden md:flex-auto md:flex md:flex-row md:flex-nowrap"
             data-testid="language_picker"
-            className="hidden md:flex md:flex-row md:flex-nowrap"
           >
-            <p>Choose language:</p>
+            <p className="flex-auto">Choose language:</p>
 
             <div className="flex-auto">
               <input type="radio" id="english" name="drone" value="english" />
@@ -58,6 +28,23 @@ export default function Header(): JSX.Element {
               <input type="radio" id="français" name="drone" value="français" />
               <label htmlFor="français">Français</label>
             </div>
+          </div>
+
+          <div className="hidden md:flex-auto md:flex md:flex-row">
+            <label
+              className="flex-auto"
+              htmlFor="search"
+              data-testid="search_label"
+            >
+              Search
+            </label>
+            <input
+              className="flex-auto"
+              type="search"
+              name="query"
+              id="search"
+              data-testid="search_input"
+            />
           </div>
         </div>
 
@@ -80,6 +67,26 @@ export default function Header(): JSX.Element {
               childClassName="py-4 hover:text-black focus:text-red-800 visited:text-purple-600 md:flex-auto"
             />
           </div>
+        </div>
+
+        <div className="hidden md:flex md:flex-row md:flex-wrap">
+          <address className="flex-auto flex flex-nowrap">
+            <a
+              className="not-italic hover:hover:text-black focus:text-red-800 visited:text-purple-600 flex-auto"
+              data-testid="email"
+              href="mailto:trenton@trentoncorp.com"
+            >
+              trenton@trentoncorp.com
+            </a>
+
+            <a
+              className="not-italic hover:hover:text-black focus:text-red-800 visited:text-purple-600 flex-auto"
+              data-testid="address"
+              href="https://goo.gl/maps/R2QPKQwxUqhZg7k68"
+            >
+              7700 Jackson Rd, Ann Arbor, MI 48103
+            </a>
+          </address>
         </div>
       </div>
     </header>
