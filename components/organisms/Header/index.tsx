@@ -7,7 +7,7 @@ export default function Header(): JSX.Element {
   return (
     <header className="font-sans text-gray-500 ring ring-black ring-opacity-5">
       <div className="container mx-auto p-4 md:grid md:grid-cols-1 md:grid-rows-1 md:gap-2">
-        <div className="hidden md:flex md:flex-row md:flex-wrap">
+        <div className="hidden md:flex md:flex-row md:flex-wrap bg-gray-100 md:p-4">
           <div
             className="hidden md:flex-auto md:flex md:flex-row md:flex-nowrap"
             data-testid="language_picker"
@@ -48,7 +48,7 @@ export default function Header(): JSX.Element {
           </div>
         </div>
 
-        <div>
+        <div className="md:px-4">
           <div className="text-center md:text-left md:flex md:flex-row md:flex-nowrap md:items-center">
             <Link href="/">
               <a data-testid="logo" className="md:flex-1">
@@ -70,7 +70,7 @@ export default function Header(): JSX.Element {
         </div>
 
         <div className="hidden md:flex md:flex-row md:flex-wrap">
-          <address className="flex-auto flex flex-nowrap">
+          <address className="flex-auto flex flex-nowrap md:px-4">
             <a
               className="not-italic hover:hover:text-black focus:text-red-800 visited:text-purple-600 flex-auto"
               data-testid="email"
