@@ -8,7 +8,7 @@ export default function Header(): JSX.Element {
     <header className="font-sans text-gray-500 ring ring-black ring-opacity-5">
       <div className="container mx-auto p-4 md:grid md:grid-cols-1 md:grid-rows-1 md:gap-2">
         <div className="hidden md:flex md:flex-row md:flex-wrap">
-          <address className="hidden md:inline">
+          <address className="hidden md:inline space-x-4">
             <a
               data-testid="email"
               href="mailto:trenton@trentoncorp.com"
@@ -25,7 +25,8 @@ export default function Header(): JSX.Element {
               7700 Jackson Rd, Ann Arbor, MI 48103
             </a>
           </address>
-          <div className="hidden md:flex md:flex-row space-x-4">
+
+          <div className="hidden md:flex md:flex-row">
             <label htmlFor="search" data-testid="search_label">
               Search
             </label>
@@ -39,7 +40,7 @@ export default function Header(): JSX.Element {
 
           <div
             data-testid="language_picker"
-            className="hidden md:flex md:flex-row space-x-4"
+            className="hidden md:flex md:flex-row md:flex-nowrap"
           >
             <p>Choose language:</p>
 
@@ -59,10 +60,11 @@ export default function Header(): JSX.Element {
             </div>
           </div>
         </div>
+
         <div>
-          <div className="md:flex md:flex-row md:flex-nowrap">
+          <div className="md:flex md:flex-row md:flex-nowrap md:items-center">
             <Link href="/">
-              <a data-testid="logo" className="text-center">
+              <a data-testid="logo" className="text-center md:flex-auto">
                 <h1 className=" text-white text-xs">Trenton Corporation</h1>
                 <Image
                   src="/companyLogo.gif"
@@ -74,8 +76,8 @@ export default function Header(): JSX.Element {
             </Link>
 
             <MainNavLinks
-              className="flex flex-col justify-center items-center font-bold md:font-normal md:flex-row"
-              childClassName="py-4 hover:text-black focus:text-red-800 visited:text-purple-600"
+              className="flex flex-col justify-center items-center font-bold md:font-normal md:flex-row md:items-stretch md:flex-auto"
+              childClassName="py-4 hover:text-black focus:text-red-800 visited:text-purple-600 md:flex-auto"
             />
           </div>
         </div>
