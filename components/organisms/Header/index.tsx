@@ -8,7 +8,7 @@ import MainNavLinks from "components/molecules/MainNavLinks";
 export default function Header(): JSX.Element {
   return (
     <header className="font-sans text-gray-500 ring ring-black ring-opacity-5">
-      <div className="hidden md:flex md:justify-between md:flex-row md:flex-wrap bg-gray-100 md:p-4 md:items-center">
+      <div className="hidden text-gray-700 md:flex md:justify-between md:flex-row md:flex-wrap bg-gray-100 md:p-4 md:items-center">
         <div
           className="hidden md:flex-auto md:flex md:flex-row md:flex-nowrap md:space-x-8"
           data-testid="language_picker"
@@ -33,7 +33,7 @@ export default function Header(): JSX.Element {
 
         <div className="hidden md:flex-initial md:flex md:flex-row md:space-x-8">
           <Link href="/search">
-            <a data-testid="search" className="space-x-4">
+            <a data-testid="search" className="space-x-1">
               <SearchIcon className="w-auto h-8 inline" />
               <span className="inline">Search</span>
             </a>
@@ -41,10 +41,10 @@ export default function Header(): JSX.Element {
         </div>
       </div>
 
-      <div className="md:px-4">
-        <div className="text-center md:text-left md:flex md:flex-row md:flex-nowrap md:items-center">
+      <div className="md:p-4">
+        <div className="text-center md:text-left md:flex md:flex-row md:flex-nowrap md:items-center md:space-x-16">
           <Link href="/">
-            <a data-testid="logo" className="md:flex-1">
+            <a data-testid="logo" className="md:flex-initial">
               <h1 className=" text-white text-xs">Trenton Corporation</h1>
               <Image
                 src="/companyLogo.gif"
@@ -56,8 +56,8 @@ export default function Header(): JSX.Element {
           </Link>
 
           <MainNavLinks
-            className="flex flex-col justify-center items-center font-bold md:font-normal md:flex-row md:items-stretch md:flex-auto"
-            childClassName="py-4 hover:text-black focus:text-red-800 visited:text-purple-600 md:flex-auto"
+            className="flex flex-col justify-center items-center font-bold md:font-normal md:flex-row md:items-stretch md:flex-initial md:space-x-16"
+            childClassName="py-4 hover:text-black focus:text-red-800 visited:text-purple-600 md:flex-initial"
           />
         </div>
       </div>
