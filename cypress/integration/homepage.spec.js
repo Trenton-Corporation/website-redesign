@@ -95,8 +95,8 @@ describe("Section one (above the fold)", () => {
       .and("be.visible");
   });
 
-  it("Displays social proof", () => {
-    // Find all 'Call Us' and 'Send a message' links & make sure they work
+  it.skip("Displays social proof", () => {
+    // This test needs to be updated. See GitHub issue for more info.
     cy.get('[data-testid="section_one"]').contains(
       "p",
       "Our products are easy to use and don’t require special tools. Thousands of miles of pipelines worldwide are protected by Trenton systems."
