@@ -30,37 +30,41 @@ export default function Header(): JSX.Element {
             <label htmlFor="français">Français</label>
           </div>
         </div>
-
-        <div className="hidden md:flex-initial md:flex md:flex-row md:space-x-8">
-          <Link href="/search">
-            <a data-testid="search" className="space-x-1">
-              <SearchIcon className="w-auto h-8 inline" />
-              <span className="inline">Search</span>
-            </a>
-          </Link>
-        </div>
       </div>
 
       <div className="md:p-4">
-        <div className="text-center md:text-left md:flex md:flex-row md:flex-nowrap md:items-center md:space-x-16">
-          <Link href="/">
-            <a data-testid="logo" className="md:flex-initial">
-              <h1 className=" text-white text-xs">Trenton Corporation</h1>
-              <Image
-                src="/companyLogo.gif"
-                width="222"
-                height="53"
-                alt="Trenton Corporation logo"
-              />
-            </a>
-          </Link>
+        <div className="text-center md:text-left md:flex md:flex-row md:flex-nowrap md:items-center md:justify-between xl:justify-start xl:space-x-8">
+          <div className="text-center md:text-left md:flex md:flex-row md:flex-nowrap md:items-center md:space-x-8">
+            <Link href="/">
+              <a data-testid="logo" className="md:flex-initial">
+                <h1 className=" text-white text-xs">Trenton Corporation</h1>
+                <Image
+                  src="/companyLogo.gif"
+                  width="222"
+                  height="53"
+                  alt="Trenton Corporation logo"
+                />
+              </a>
+            </Link>
 
-          <MainNavLinks
-            className="flex flex-col justify-center items-center font-bold md:font-normal md:flex-row md:items-stretch md:flex-initial md:space-x-16"
-            childClassName="py-4 hover:text-black focus:text-red-800 visited:text-purple-600 md:flex-initial"
-          />
+            <MainNavLinks
+              className="flex flex-col justify-center items-center font-bold md:font-normal md:flex-row md:items-stretch md:flex-initial md:space-x-8"
+              childClassName="py-4 hover:text-black focus:text-red-800 visited:text-purple-600 md:flex-initial md:py-0"
+            />
+          </div>
+
+          <div className="hidden md:flex-initial md:flex md:flex-row md:space-x-8">
+            <Link href="/search">
+              <a data-testid="search" className="space-x-1">
+                <SearchIcon className="w-auto h-8 inline" />
+                <span className="inline">Search</span>
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
+
+      <hr className="hidden md:block md:text-gray-100 md:pb-2" />
 
       <div className="hidden md:flex md:flex-row md:flex-wrap">
         <address className="flex-auto flex flex-nowrap md:px-4">
