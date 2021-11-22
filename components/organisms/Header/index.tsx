@@ -70,7 +70,7 @@ export default function Header(): JSX.Element {
 
           <div className="hidden md:flex-initial md:flex md:flex-row md:space-x-8 md:items-center">
             <Link href="/search">
-              <a data-testid="search" className="space-x-1">
+              <a data-testid="search" className="hover:hover:text-black focus:text-red-800 space-x-1">
                 <SearchIcon className="w-auto h-6 inline" />
                 <span className="inline">Search</span>
               </a>
