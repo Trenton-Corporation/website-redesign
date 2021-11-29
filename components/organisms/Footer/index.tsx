@@ -1,25 +1,14 @@
 import Link from "next/link";
 
 import MainNavLinks from "components/molecules/MainNavLinks";
+import SocialLinks from "components/molecules/SocialLinks";
 
 export default function Footer() {
   return (
     <footer data-testid="footer">
       <div>
         <h3>Stay in touch</h3>
-        <ul data-testid="social">
-          <li>
-            <a href="https://www.youtube.com/user/TrentonCorpVideos?feature=watch">
-              YouTube
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/company/trenton-corporation-anticorrosion-materials">
-              LinkedIn
-            </a>
-          </li>
-        </ul>
-
+        <SocialLinks />
         <div data-testid="products">
           <h3>Products</h3>
           <ul>
